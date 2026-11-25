@@ -1,4 +1,4 @@
-const CACHE_NAME = 'stressfree-static-v7';
+const CACHE_NAME = 'stressfree-static-v8';
 const APP_FILES = [
   './',
   './index.html',

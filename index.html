@@ -162,21 +162,106 @@
     .avatar-picker-grid .avatar-choice.active{background:#eaf5fb;border-color:#2b7099}
     @media(max-width:560px){.avatar-picker-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.avatar-picker-grid .avatar-choice{min-height:52px}}
 
+
+    /* V8 product redesign: distinct product areas, calmer home dashboard and working deadline calendar */
+    :root{--sidebar:248px;--paper:#f6f8fa;--line:#e4ebf0;--ink:#193a52}
+    .sidebar{padding:22px 15px 17px}
+    .brand-lockup{margin-bottom:20px;padding-bottom:20px}
+    .nav-section{margin:0 0 15px}
+    .nav-section .sidebar-label{padding-left:12px;margin-bottom:6px;font-size:9px;letter-spacing:.16em}
+    .nav-section .nav-list{gap:3px}
+    .nav-btn{padding:10px 12px;border-radius:11px;font-size:12px;gap:11px}
+    .nav-btn.active{box-shadow:inset 3px 0 var(--sky),0 1px 2px rgba(24,80,121,.025)}
+    .sidebar-tip{padding:13px;margin:8px 2px 12px}
+    .main-shell{min-width:0}
+    .topbar{padding-inline:clamp(18px,3vw,42px)}
+    .content{max-width:1360px;padding:30px clamp(18px,3vw,42px) 58px}
+    .app-footer{max-width:1360px;margin-inline:auto;padding-inline:clamp(18px,3vw,42px)}
+    .home-welcome{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:30px 32px;margin-bottom:17px;background:linear-gradient(115deg,#174d75,#286f9b 62%,#4b91b1);color:#fff;border-radius:23px;box-shadow:0 14px 35px rgba(24,80,121,.11);overflow:hidden;position:relative}
+    .home-welcome:after{content:"";position:absolute;width:300px;height:300px;border:1px solid #ffffff22;border-radius:50%;right:65px;top:-210px;box-shadow:0 0 0 36px #ffffff08,0 0 0 75px #ffffff06}
+    .home-welcome-copy,.home-welcome-side{position:relative;z-index:1}
+    .home-welcome .eyebrow{color:#c5e4f1;font-size:9px;margin-bottom:9px}
+    .home-welcome h1{color:#fff;font-size:clamp(26px,3vw,36px);margin-bottom:9px}
+    .home-welcome p{color:#e1edf4;font-size:13px;margin:0;max-width:560px}
+    .home-welcome-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:19px}
+    .home-welcome .primary-btn{background:#fff;color:#174d75;box-shadow:none}
+    .home-welcome .soft-btn{background:#ffffff16;color:#fff;border:1px solid #ffffff46}
+    .home-welcome-side{display:grid;gap:12px;min-width:185px;justify-items:end}
+    .welcome-date-card{display:flex;align-items:center;gap:10px;padding:12px 15px;border:1px solid #ffffff38;border-radius:16px;background:#ffffff13;color:#edf8fc;font-size:11px;text-align:right}
+    .welcome-date-day{font-size:30px;font-weight:850;line-height:1;color:#fff}
+    .welcome-side-note{display:flex;align-items:center;gap:8px;color:#e0edf4;font-size:10px;text-align:right}
+    .welcome-dot{width:7px;height:7px;border-radius:50%;background:#b5e4d5;box-shadow:0 0 0 4px #b5e4d529}
+    .home-stat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:17px}
+    .home-stat{display:flex;align-items:center;gap:13px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px 16px;box-shadow:0 3px 14px rgba(24,80,121,.035);min-width:0}
+    .home-stat-icon{width:37px;height:37px;display:grid;place-items:center;background:#edf5f8;color:#347b9e;border-radius:12px;flex:none}
+    .home-stat-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .home-stat div{min-width:0}.home-stat div>span{display:block;color:#6f8493;font-size:10px;font-weight:750}.home-stat strong{display:block;font-size:23px;line-height:1.15;color:#194d72;letter-spacing:-.04em;margin-top:3px}.home-stat strong small{font-size:11px;color:#90a0aa;letter-spacing:0}.home-stat div>small{display:block;color:#94a3ad;font-size:9px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .home-stat.has-alert .home-stat-icon{background:#fff1ed;color:#bf6a4a}.home-stat.has-alert strong{color:#b45a4c}
+    .home-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(290px,.82fr);gap:16px;align-items:start}
+    .home-main-column,.home-side-column{display:grid;gap:16px;min-width:0}
+    .home-welcome+.home-stat-grid+.home-layout .panel{padding:19px}
+    .home-next-panel{border-color:#dbe8ee}
+    .home-next-panel .panel-header{align-items:flex-start}
+    .suggested-list{display:grid}
+    .suggested-task{display:flex;align-items:center;gap:11px;padding:13px 0;border-top:1px solid #eef2f5;min-width:0}
+    .suggested-rank{width:28px;height:28px;border-radius:9px;background:#f0f6f8;color:#6d91a5;display:grid;place-items:center;font-size:10px;font-weight:850;flex:none}
+    .suggested-task-main{min-width:0;flex:1}.suggested-task-main strong{display:block;color:#284b63;font-size:12px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.suggested-task-main span{display:block;color:#8b9ba6;font-size:10px;margin-top:4px}
+    .suggested-focus{border:1px solid #dce9ef;background:#f7fafb;color:#286b91;border-radius:10px;padding:7px 9px;display:flex;align-items:center;gap:5px;font-size:10px;font-weight:800;flex:none}.suggested-focus:hover{background:#eaf4f8}.suggested-focus svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+    .panel-foot-link{display:flex;justify-content:flex-end;margin-top:10px}
+    .upcoming-list{display:grid}.upcoming-item{display:flex;align-items:center;gap:12px;width:100%;padding:11px 0;border:0;border-top:1px solid #eef2f5;background:transparent;text-align:left}.upcoming-item:hover .upcoming-info strong{color:#2d7ca3}
+    .upcoming-date{width:42px;height:44px;border-radius:11px;background:#eff6f9;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#225b7f;flex:none}.upcoming-date b{font-size:16px;line-height:1.1}.upcoming-date small{font-size:9px;text-transform:uppercase;font-weight:800}
+    .upcoming-info{min-width:0;flex:1}.upcoming-info strong{display:block;color:#294b62;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.upcoming-info small{display:block;color:#91a0ab;font-size:9px;margin-top:3px}.upcoming-when{font-size:9px;color:#7991a0;font-weight:800;white-space:nowrap}
+    .home-plan-list{display:grid;gap:13px}.home-plan-top{display:flex;justify-content:space-between;gap:10px;margin-bottom:7px}.home-plan-top strong{display:block;color:#2b4c63;font-size:11px}.home-plan-top span{display:block;color:#91a0aa;font-size:9px;margin-top:3px}.home-plan-top b{color:#397fa2;font-size:11px}
+    .home-focus-number{font-size:28px;font-weight:850;color:#195276;letter-spacing:-.05em;margin:1px 0 2px}.home-focus-number span{font-size:11px;font-weight:700;color:#8b9da9;letter-spacing:0;margin-left:5px}
+    .home-focus-panel .week-chart{height:120px}.home-focus-panel .chart-bar-track{height:88px}
+    .home-tool-list{display:grid}.home-tool{display:flex;align-items:center;gap:11px;width:100%;padding:11px 0;border:0;border-top:1px solid #eef2f5;background:transparent;text-align:left}.home-tool:first-child{border-top:0;padding-top:2px}.home-tool>span:nth-child(2){min-width:0;flex:1}.home-tool>span:nth-child(2) strong{display:block;font-size:11px;color:#2d4e64}.home-tool>span:nth-child(2) small{display:block;color:#91a0aa;font-size:9px;margin-top:3px}.home-tool>svg{width:14px;height:14px;stroke:#9aabb5;fill:none;stroke-width:1.7}.home-tool-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:#edf5f8;color:#347b9e;flex:none}.home-tool-icon svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}
+    .home-reminder-card{display:flex;align-items:flex-start;gap:11px;background:#f0f6f8;border:1px solid #e2edf1;border-radius:16px;padding:15px}.home-reminder-card>span{width:29px;height:29px;display:grid;place-items:center;background:#deebf1;border-radius:9px;color:#286b91;flex:none}.home-reminder-card svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}.home-reminder-card strong{display:block;color:#2b4d64;font-size:11px}.home-reminder-card p{color:#8094a1;font-size:10px;line-height:1.5;margin:4px 0 0}
+    .calendar-panel{padding:19px}.calendar-toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:17px}.calendar-period{display:flex;align-items:center;gap:12px;min-width:0}.calendar-period .icon-btn{font-size:22px;color:#51768d}.calendar-period h2{margin:0;font-size:17px}.calendar-period span{display:block;color:#8b9ca8;font-size:10px;margin-top:3px}.calendar-controls{display:flex;align-items:center;gap:9px}.calendar-week-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+    .calendar-day{min-height:235px;border:1px solid #e5edf1;border-radius:14px;background:#fff;display:flex;flex-direction:column;min-width:0;overflow:hidden}.calendar-day.is-today{border-color:#91bdcf;box-shadow:inset 0 0 0 1px #d5e9f0;background:#fbfdfe}.calendar-day-head{display:grid;justify-items:center;gap:3px;padding:11px 5px 9px;background:#f7fafb;border-bottom:1px solid #edf2f5}.calendar-day-head span{font-size:9px;text-transform:uppercase;font-weight:850;color:#8195a3;letter-spacing:.08em}.calendar-day-head strong{font-size:19px;color:#244e68;line-height:1.1}.calendar-day-head small{font-size:8px;color:#2c7a9e;font-weight:850}.calendar-day-items{display:grid;align-content:start;gap:5px;padding:9px 7px;flex:1}.calendar-no-items{font-size:9px;color:#b0bbc2;text-align:center;padding:12px 0}.calendar-event{width:100%;min-width:0;border:0;border-radius:7px;padding:6px 6px;display:flex;gap:5px;align-items:flex-start;text-align:left;background:#eaf3f8;color:#2a6283;font-size:9px;line-height:1.35}.calendar-event span:last-child{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-break:break-word}.calendar-event:hover{filter:brightness(.97)}.calendar-event.done{background:#edf5f1;color:#648b7b;text-decoration:line-through}.calendar-event.plan-event{background:#f4effa;color:#755b91}.calendar-event-dot{width:6px;height:6px;border-radius:50%;background:#4388aa;flex:none;margin-top:3px}.calendar-event-dot.high{background:#c76b70}.calendar-event-dot.low{background:#69a38c}.calendar-day .calendar-add{margin:0 7px 8px}.calendar-add{border:0;background:transparent;color:#4e89a7;border-radius:7px;padding:6px;font-size:9px;font-weight:850;text-align:left}.calendar-add:hover{background:#edf5f8}.calendar-add.compact{padding:1px 4px;font-size:14px;line-height:1}
+    .month-weekdays{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-bottom:7px}.month-weekdays span{text-align:center;color:#8295a2;font-size:9px;font-weight:850;text-transform:uppercase;padding:6px}.calendar-month-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px}.month-cell{min-height:112px;border:1px solid #e7edf1;border-radius:10px;padding:7px;min-width:0;background:#fff}.month-cell.outside-month{background:#f8fafb}.month-cell.is-today{border-color:#80b4ca;background:#f5fbfd}.month-cell-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px}.month-cell-head strong{font-size:11px;color:#49677c}.outside-month .month-cell-head strong{color:#b5c0c7}.month-cell-events{display:grid;gap:3px}.month-cell .calendar-event{font-size:8px;padding:4px 5px}.month-more{font-size:8px;color:#8297a4;padding:1px 3px}.calendar-legend{display:flex;gap:17px;align-items:center;flex-wrap:wrap;margin-top:13px;color:#8194a1;font-size:9px}.calendar-legend span{display:flex;align-items:center;gap:6px}.calendar-legend i{width:7px;height:7px;border-radius:50%;background:#4388aa}.calendar-legend i.plan-legend{background:#9276ac}.calendar-legend i.done-legend{background:#80a995}.calendar-footer-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:15px}.calendar-help-copy{font-size:11px;color:#8295a2;line-height:1.6;margin:0}.calendar-help-copy strong{color:#3c627a}
+    .more-tools-list{display:grid;gap:5px}.more-tools-list .home-tool{padding:12px 8px;border-radius:10px}.more-tools-list .home-tool:hover{background:#f5f9fb}
+    .profile-menu{max-height:min(75vh,540px);overflow:auto}
+    .text-link svg{width:13px;height:13px;vertical-align:middle;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+    .home-tool>svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    @media(max-width:1120px){.home-layout{grid-template-columns:minmax(0,1.3fr) minmax(270px,.8fr)}.home-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.calendar-day{min-height:205px}}
+    @media(max-width:900px){.home-welcome{padding:24px}.home-welcome-side{min-width:150px}.home-layout{grid-template-columns:1fr 300px}.calendar-week-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.calendar-day{min-height:170px}}
+    @media(max-width:820px){:root{--sidebar:0px}.sidebar{display:none}.main-shell{margin-left:0}.content{padding:23px 17px 110px}.topbar{padding:0 16px}.mobile-nav{display:flex;justify-content:space-around;gap:2px;padding:7px 5px calc(7px + env(safe-area-inset-bottom));}.mobile-nav .nav-btn{display:flex;flex:1;min-width:0;flex-direction:column;justify-content:center;align-items:center;gap:3px;padding:6px 2px;font-size:9px;border-radius:10px}.mobile-nav .nav-btn svg{width:17px;height:17px}.home-layout{grid-template-columns:1fr}.home-side-column{grid-template-columns:1fr 1fr;align-items:start}.home-reminder-card{grid-column:1/-1}.calendar-week-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.calendar-day:nth-child(n+6){display:flex}}
+    @media(max-width:560px){.home-welcome{display:block;padding:21px 19px;border-radius:19px}.home-welcome-side{display:flex;justify-content:space-between;align-items:center;justify-items:initial;margin-top:17px}.welcome-date-card{padding:8px 11px}.welcome-date-day{font-size:25px}.home-stat-grid{gap:8px}.home-stat{padding:12px 10px;gap:8px}.home-stat-icon{width:31px;height:31px}.home-stat strong{font-size:20px}.home-stat div>small{font-size:8px}.home-side-column{grid-template-columns:1fr}.calendar-toolbar{align-items:flex-start}.calendar-period{gap:7px}.calendar-period h2{font-size:14px}.calendar-controls{width:100%;justify-content:space-between}.calendar-week-grid{grid-template-columns:1fr}.calendar-day{min-height:0}.calendar-day:nth-child(n){display:flex}.calendar-day-head{display:flex;align-items:center;justify-content:flex-start;gap:9px;padding:8px 11px}.calendar-day-head strong{font-size:16px}.calendar-day-head small{margin-left:auto}.calendar-day-items{padding:6px 9px}.calendar-no-items{padding:5px}.calendar-day .calendar-add{margin:0 9px 7px}.calendar-footer-grid{grid-template-columns:1fr}.month-cell{min-height:73px;padding:4px}.month-cell .calendar-event{font-size:7px;padding:3px}.month-weekdays{gap:3px}.calendar-month-grid{gap:3px}.month-weekdays span{font-size:8px;padding:4px 0}.month-cell-head strong{font-size:9px}.month-cell-head .calendar-add{font-size:12px}.home-stat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.suggested-task{gap:7px}.suggested-rank{width:24px;height:24px}.suggested-focus{padding:7px}.suggested-focus span{display:none}.suggested-task-main strong{font-size:10px}.suggested-task-main span{font-size:8px}.upcoming-when{font-size:8px}.mobile-nav .nav-btn{font-size:8px}}
+    @media(prefers-reduced-motion:reduce){.home-welcome:after{display:none}}
+
   </style>
 </head>
 <body>
 <div class="app-shell">
   <aside class="sidebar" aria-label="Main navigation">
     <div class="brand-lockup"><button class="brand-home" data-screen="dashboard" aria-label="StressFree home"><img src="./stressfree-logo.svg" alt="StressFree — go to home"></button></div>
-    <p class="sidebar-label">Your workspace</p>
-    <nav class="nav-list" id="desktopNav">
-      <button class="nav-btn active" data-screen="dashboard"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg>Dashboard</button>
-      <button class="nav-btn" data-screen="planner"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M7 2v4M17 2v4M3 9h18M8 13h3M8 17h7"/></svg>My planner</button>
-      <button class="nav-btn" data-screen="focus"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8.5"/><path d="M12 8v5l3 2M9 2h6M12 2v2M19 5l1.5-1.5"/></svg>Focus studio</button>
-      <button class="nav-btn" data-screen="study"><svg viewBox="0 0 24 24"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v17H5.5A2.5 2.5 0 0 1 3 17.5z"/><path d="M3 5.5v12M7 7h9M7 11h7M7 15h5"/></svg>Study decks</button>
-      <button class="nav-btn" data-screen="wellbeing"><svg viewBox="0 0 24 24"><path d="M20.5 8.5c0 5-8.5 11-8.5 11s-8.5-6-8.5-11a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2Z"/><path d="M8 12h2l1.2-2.5L13 15l1.2-3H16"/></svg>Wellbeing</button>
-      <button class="nav-btn" data-screen="insights"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h17"/><path d="m7 15 4-4 3 2 5-7"/><path d="M16 6h3v3"/></svg>Insights</button>
-    </nav>
+    <div class="nav-section">
+      <p class="sidebar-label">Start here</p>
+      <nav class="nav-list" id="desktopNav">
+        <button class="nav-btn active" data-screen="dashboard"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg>Home</button>
+      </nav>
+    </div>
+    <div class="nav-section">
+      <p class="sidebar-label">Plan</p>
+      <nav class="nav-list">
+        <button class="nav-btn" data-screen="planner"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v18H6.5A2.5 2.5 0 0 1 4 18.5z"/><path d="M4 7h16M8 11h8M8 15h6"/></svg>My planner</button>
+        <button class="nav-btn" data-screen="calendar"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M7 2v4M17 2v4M3 9h18M8 13h3M14 13h2M8 17h3"/></svg>Calendar</button>
+      </nav>
+    </div>
+    <div class="nav-section">
+      <p class="sidebar-label">Study</p>
+      <nav class="nav-list">
+        <button class="nav-btn" data-screen="focus"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8.5"/><path d="M12 8v5l3 2M9 2h6M12 2v2M19 5l1.5-1.5"/></svg>Focus studio</button>
+        <button class="nav-btn" data-screen="study"><svg viewBox="0 0 24 24"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v17H5.5A2.5 2.5 0 0 1 3 17.5z"/><path d="M3 5.5v12M7 7h9M7 11h7M7 15h5"/></svg>Study decks</button>
+      </nav>
+    </div>
+    <div class="nav-section">
+      <p class="sidebar-label">Personal</p>
+      <nav class="nav-list">
+        <button class="nav-btn" data-screen="wellbeing"><svg viewBox="0 0 24 24"><path d="M20.5 8.5c0 5-8.5 11-8.5 11s-8.5-6-8.5-11a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2Z"/><path d="M8 12h2l1.2-2.5L13 15l1.2-3H16"/></svg>Wellbeing</button>
+        <button class="nav-btn" data-screen="insights"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h17"/><path d="m7 15 4-4 3 2 5-7"/><path d="M16 6h3v3"/></svg>Insights</button>
+      </nav>
+    </div>
     <div class="sidebar-spacer"></div>
     <div class="sidebar-tip"><div class="tip-mark"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg></div><strong>A gentle reminder</strong><p>Progress is built in small steps. Choose one thing, give it your attention, then take a breath.</p></div>
     <div class="sidebar-bottom"><button class="avatar" type="button" id="sidebarAvatar" data-action="toggle-profile-menu" aria-label="Open your profile settings">S</button><div class="profile-mini"><strong id="sidebarName">Your study space</strong><span id="sidebarSchool">Student workspace</span></div><button class="icon-btn" data-screen="settings" aria-label="Settings" title="Settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.6 2.77-.09-.03a1.7 1.7 0 0 0-1.83.53l-.05.08h-3.2l-.04-.09a1.7 1.7 0 0 0-1.56-1.02 1.7 1.7 0 0 0-.75.18l-.09.04-2.77-1.6.03-.09a1.7 1.7 0 0 0-.53-1.83l-.08-.05v-3.2l.09-.04a1.7 1.7 0 0 0 1.02-1.56 1.7 1.7 0 0 0-.18-.75l-.04-.09 1.6-2.77.09.03a1.7 1.7 0 0 0 1.83-.53l.05-.08h3.2l.04.09a1.7 1.7 0 0 0 1.56 1.02 1.7 1.7 0 0 0 .75-.18l.09-.04 2.77 1.6-.03.09A1.7 1.7 0 0 0 19.7 11l.08.05v3.2z" transform="translate(-.9 -1.1) scale(1.08)"/></svg></button></div>
@@ -189,7 +274,7 @@
         <div class="search-wrap"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="globalSearch" type="search" placeholder="Search tasks, courses, decks..." aria-label="Search your workspace"></div>
       </div>
       <div class="topbar-right"><div class="today-chip"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M7 2v4M17 2v4M3 9h18"/></svg><span id="topDate">Today</span></div><button class="profile-trigger" id="profileTrigger" data-action="quick-avatar" aria-label="Open your settings" aria-haspopup="true" aria-expanded="false" title="Your settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.6-3.2 3.1-5 7-5s6.4 1.8 7 5"/></svg></button><button class="primary-btn" data-action="add-task"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span class="btn-label">New task</span></button></div>
-      <div class="profile-menu hidden" id="profileMenu" role="menu" aria-label="Your settings menu"><div class="profile-menu-head"><button type="button" class="profile-menu-avatar" id="menuAvatar" data-action="quick-avatar" title="Change profile picture">S</button><div><strong id="menuProfileName">Your study space</strong><span id="menuProfileSchool">Student workspace</span></div></div><div class="menu-group-label">Your settings</div><button type="button" role="menuitem" data-action="settings-jump" data-target="settings-profile"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.6-3.2 3.1-5 7-5s6.4 1.8 7 5"/></svg>Profile & courses</button><button type="button" role="menuitem" data-action="settings-jump" data-target="settings-reminders"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>Notifications & reminders</button><button type="button" role="menuitem" data-action="settings-jump" data-target="settings-data"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg>Data & privacy</button><button type="button" role="menuitem" data-action="settings-jump" data-target="settings-account"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg>Account & sync</button><button type="button" role="menuitem" data-screen="insights"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h17M7 15l4-4 3 2 5-7"/></svg>Study insights</button><button type="button" role="menuitem" data-action="install-app"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M10 18h4"/></svg>Install StressFree</button></div>
+      <div class="profile-menu hidden" id="profileMenu" role="menu" aria-label="Your settings menu"><div class="profile-menu-head"><button type="button" class="profile-menu-avatar" id="menuAvatar" data-action="quick-avatar" title="Change profile picture">S</button><div><strong id="menuProfileName">Your study space</strong><span id="menuProfileSchool">Student workspace</span></div></div><div class="menu-group-label">Your settings</div><button type="button" role="menuitem" data-action="settings-jump" data-target="settings-profile"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.6-3.2 3.1-5 7-5s6.4 1.8 7 5"/></svg>Profile & courses</button><button type="button" role="menuitem" data-action="settings-jump" data-target="settings-reminders"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>Notifications & reminders</button><button type="button" role="menuitem" data-action="settings-jump" data-target="settings-data"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg>Data & privacy</button><button type="button" role="menuitem" data-action="settings-jump" data-target="settings-account"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg>Account & sync</button><button type="button" role="menuitem" data-screen="wellbeing"><svg viewBox="0 0 24 24"><path d="M20.5 8.5c0 5-8.5 11-8.5 11s-8.5-6-8.5-11a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2Z"/></svg>Wellbeing check-in</button><button type="button" role="menuitem" data-screen="insights"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h17M7 15l4-4 3 2 5-7"/></svg>Study insights</button><button type="button" role="menuitem" data-screen="settings"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19 13.5a7 7 0 0 0 0-3l2-1.5-2-3.5-2.4 1a7 7 0 0 0-2.6-1.5L13.5 2h-4L9 5a7 7 0 0 0-2.6 1.5L4 5.5 2 9l2 1.5a7 7 0 0 0 0 3L2 15l2 3.5 2.4-1A7 7 0 0 0 9 19l.5 3h4l.5-3a7 7 0 0 0 2.6-1.5l2.4 1L21 15z"/></svg>Settings</button><button type="button" role="menuitem" data-action="install-app"><svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2"/><path d="M10 18h4"/></svg>Install StressFree</button></div>
     </header>
 
     <main class="content" id="appMain" tabindex="-1"></main>
@@ -199,10 +284,11 @@
 
 <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
   <button class="nav-btn active" data-screen="dashboard"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="5" rx="2"/><rect x="13" y="10" width="8" height="11" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/></svg>Home</button>
-  <button class="nav-btn" data-screen="planner"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M7 2v4M17 2v4M3 9h18M8 13h3M8 17h7"/></svg>Planner</button>
-  <button class="nav-btn" data-screen="focus"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8.5"/><path d="M12 8v5l3 2M9 2h6M12 2v2"/></svg>Focus</button>
-  <button class="nav-btn" data-screen="study"><svg viewBox="0 0 24 24"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v17H5.5A2.5 2.5 0 0 1 3 17.5z"/><path d="M3 5.5v12M7 7h9M7 11h7"/></svg>Study</button>
-  <button class="nav-btn" data-screen="wellbeing"><svg viewBox="0 0 24 24"><path d="M20.5 8.5c0 5-8.5 11-8.5 11s-8.5-6-8.5-11a4.5 4.5 0 0 1 8.5-2 4.5 4.5 0 0 1 8.5 2Z"/></svg>Wellbeing</button>
+  <button class="nav-btn" data-screen="planner"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M7 2v4M17 2v4M3 9h18M8 13h3"/></svg>Plan</button>
+  <button class="nav-btn" data-screen="calendar"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M7 2v4M17 2v4M3 9h18M8 13h3"/></svg>Calendar</button>
+  <button class="nav-btn" data-screen="focus"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8.5"/><path d="M12 8v5l3 2M9 2h6"/></svg>Focus</button>
+  <button class="nav-btn" data-screen="study"><svg viewBox="0 0 24 24"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H20v17H5.5A2.5 2.5 0 0 1 3 17.5z"/><path d="M3 5.5v12M7 7h9"/></svg>Study</button>
+  <button class="nav-btn" data-action="open-more"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg>More</button>
 </nav>
 
 <dialog class="dialog" id="appDialog" aria-labelledby="dialogTitle"><div id="dialogContent"></div></dialog>
@@ -259,6 +345,7 @@
 
   let currentScreen='dashboard';
   let plannerFilter='open', plannerCourse='All courses', plannerSearch='';
+  let calendarOffset=0, calendarMode='week';
   let selectedDeckId=null, flashIndex=0, flashFlipped=false;
   let chosenStress=5, chosenMood='Okay', chosenEnergy=3;
   const savedTodayCheckin=state.checkins.find(c=>c.date===todayKey());
@@ -310,7 +397,7 @@
   }
   function showScreen(screen){
     currentScreen=screen; if(screen!=='planner') plannerSearch='';
-    $$('#desktopNav [data-screen],#mobileNav [data-screen]').forEach(btn=>btn.classList.toggle('active',btn.dataset.screen===screen));
+    $$('.sidebar [data-screen],#mobileNav [data-screen]').forEach(btn=>btn.classList.toggle('active',btn.dataset.screen===screen));
     $('#globalSearch').value=''; renderScreen(); window.scrollTo({top:0,behavior:'smooth'});
   }
   function openDialog(title,body,footer=''){
@@ -348,41 +435,65 @@
     </div>`;
   }
   function weeklyFocusData(){const days=[];for(let i=6;i>=0;i--){const date=addDays(new Date(),-i),key=todayKey(date);const minutes=state.focusSessions.filter(s=>s.date===key).reduce((sum,s)=>sum+(Number(s.minutes)||0),0);days.push({key,label:new Intl.DateTimeFormat('en-ZA',{weekday:'short'}).format(date).slice(0,2),minutes});}return days;}
+  function taskUrgencyScore(task){
+    let score=task.priority==='High'?30:task.priority==='Medium'?20:10;
+    if(task.dueDate){
+      const delta=Math.round((dateFromKey(task.dueDate)-dateFromKey(todayKey()))/86400000);
+      score+=delta<0?70+Math.min(30,Math.abs(delta)*5):Math.max(0,35-delta*5);
+    }
+    return score;
+  }
+  function recommendedTasks(limit=3){
+    return state.tasks.filter(t=>!t.completed).slice().sort((a,b)=>taskUrgencyScore(b)-taskUrgencyScore(a)).slice(0,limit);
+  }
   function renderDashboard(){
-    const today=todayKey(),open=state.tasks.filter(t=>!t.completed),todayTasks=sortedTasks(open.filter(t=>!t.dueDate||t.dueDate<=today)).slice(0,5),completed=state.tasks.filter(t=>t.completed).length;
-    const dueWeek=state.tasks.filter(t=>!t.completed&&t.dueDate&&t.dueDate>=today&&t.dueDate<=todayKey(addDays(new Date(),7))).length;
-    const focusWeek=weeklyFocusData().reduce((sum,d)=>sum+d.minutes,0);const todayMood=state.checkins.find(c=>c.date===today);
-    const doneToday=state.tasks.filter(t=>t.completed&&t.completedAt&&todayKey(new Date(t.completedAt))===today).length;
-    const totalForToday=state.tasks.filter(t=>t.dueDate===today).length;const progress=totalForToday?Math.round((doneToday/totalForToday)*100):0;
-    const firstName=(state.profile.name.trim().split(/\s+/)[0]||'there');const hour=new Date().getHours();const greet=hour<12?'Good morning':hour<18?'Good afternoon':'Good evening';
-    const chart=weeklyFocusData();const max=Math.max(30,...chart.map(x=>x.minutes));
-    const upcoming=sortedTasks(open.filter(t=>t.dueDate&&t.dueDate>today)).slice(0,4);
-    return `<div class="hero-panel"><div class="hero-content"><span class="hero-kicker">${svgIcon('spark')} YOUR STUDENT SPACE</span><h1>${greet}, ${escapeHTML(firstName)}.</h1><p>Make room for what matters today. Your study plan, focus time and wellbeing tools are all in one calm space.</p><div class="hero-actions"><button class="primary-btn" data-action="add-task">${svgIcon('plus')} Add a task</button><button class="soft-btn" data-screen="focus">${svgIcon('play')} Start a focus session</button></div></div></div>
-      <div class="stats-grid">
-        <div class="stat-card"><div class="stat-top"><span class="stat-label">Tasks to do</span><span class="stat-icon">${svgIcon('calendar')}</span></div><div class="stat-value">${open.length}</div><div class="stat-foot">${dueWeek} due in the next 7 days</div></div>
-        <div class="stat-card"><div class="stat-top"><span class="stat-label">Focus this week</span><span class="stat-icon">${svgIcon('clock')}</span></div><div class="stat-value">${focusWeek}<small style="font-size:12px;color:#8da0ad;font-weight:750"> min</small></div><div class="stat-foot">Time recorded in completed focus sessions</div></div>
-        <div class="stat-card"><div class="stat-top"><span class="stat-label">Completed tasks</span><span class="stat-icon">${svgIcon('check')}</span></div><div class="stat-value">${completed}</div><div class="stat-foot">Across your study planner</div></div>
-        <div class="stat-card"><div class="stat-top"><span class="stat-label">Today's check-in</span><span class="stat-icon">${svgIcon('heart')}</span></div><div class="stat-value">${todayMood?`${todayMood.stress}<small style="font-size:12px;color:#8da0ad;font-weight:750"> / 10</small>`:'—'}</div><div class="stat-foot">${todayMood?escapeHTML(todayMood.mood):'Optional · whenever you need it'}</div></div>
+    const today=todayKey(),open=state.tasks.filter(t=>!t.completed),recommended=recommendedTasks(3);
+    const weekEnd=todayKey(addDays(new Date(),7));
+    const dueWeek=open.filter(t=>t.dueDate&&t.dueDate>=today&&t.dueDate<=weekEnd).length;
+    const overdue=open.filter(t=>t.dueDate&&t.dueDate<today).length;
+    const focusWeek=weeklyFocusData().reduce((sum,d)=>sum+d.minutes,0);
+    const focusToday=state.focusSessions.filter(s=>s.date===today).reduce((sum,s)=>sum+(Number(s.minutes)||0),0);
+    const completedToday=state.tasks.filter(t=>t.completed&&t.completedAt&&todayKey(new Date(t.completedAt))===today).length;
+    const completedTotal=state.tasks.filter(t=>t.completed).length;
+    const firstName=state.profile.name.trim().split(/\s+/)[0]||'there';
+    const hour=new Date().getHours(),greet=hour<12?'Good morning':hour<18?'Good afternoon':'Good evening';
+    const todayLabel=fmtLongDate(new Date());
+    const upcoming=sortedTasks(open.filter(t=>t.dueDate&&t.dueDate>=today)).slice(0,5);
+    const plans=state.plans.slice().sort((a,b)=>(a.dueDate||'9999').localeCompare(b.dueDate||'9999')).slice(0,3);
+    const focusChart=weeklyFocusData(),max=Math.max(30,...focusChart.map(x=>x.minutes));
+    const next=recommended[0];
+    return `<section class="home-welcome">
+      <div class="home-welcome-copy"><div class="eyebrow">YOUR STUDENT WORKSPACE · ${escapeHTML(todayLabel.toUpperCase())}</div><h1>${greet}, ${escapeHTML(firstName)}.</h1><p>Here is your day at a glance. Start with one useful step, then build from there.</p>
+        <div class="home-welcome-actions"><button class="primary-btn" data-action="add-task">${svgIcon('plus')} Add a task</button><button class="soft-btn" data-screen="calendar">${svgIcon('calendar')} View calendar</button></div>
+      </div><div class="home-welcome-side"><div class="welcome-date-card"><span class="welcome-date-day">${new Intl.DateTimeFormat('en-ZA',{day:'2-digit'}).format(new Date())}</span><span>${new Intl.DateTimeFormat('en-ZA',{weekday:'long',month:'long'}).format(new Date())}</span></div><div class="welcome-side-note"><span class="welcome-dot"></span><span>${overdue?`${overdue} overdue task${overdue===1?'':'s'} need a review`:'Your workspace is ready when you are'}</span></div></div>
+    </section>
+    <div class="home-stat-grid">
+      <article class="home-stat"><span class="home-stat-icon">${svgIcon('calendar')}</span><div><span>Open tasks</span><strong>${open.length}</strong><small>${dueWeek} due in the next 7 days</small></div></article>
+      <article class="home-stat ${overdue?'has-alert':''}"><span class="home-stat-icon">${svgIcon('clock')}</span><div><span>Overdue</span><strong>${overdue}</strong><small>${overdue?'Review these and reset dates':'Nothing overdue right now'}</small></div></article>
+      <article class="home-stat"><span class="home-stat-icon">${svgIcon('target')}</span><div><span>Focus this week</span><strong>${focusWeek}<small> min</small></strong><small>${focusToday} minutes recorded today</small></div></article>
+      <article class="home-stat"><span class="home-stat-icon">${svgIcon('check')}</span><div><span>Completed tasks</span><strong>${completedTotal}</strong><small>${completedToday} completed today</small></div></article>
+    </div>
+    <div class="home-layout">
+      <div class="home-main-column">
+        <section class="panel home-next-panel"><div class="panel-header"><div><div class="eyebrow">A GOOD PLACE TO START</div><h2>Your suggested next steps</h2><p class="subheading">Based on due dates and the priority you've set. You can change the order anytime.</p></div><span class="mini-badge blue">Top ${recommended.length}</span></div>
+          ${recommended.length?`<div class="suggested-list">${recommended.map((t,i)=>`<div class="suggested-task"><div class="suggested-rank">0${i+1}</div><div class="suggested-task-main"><strong>${escapeHTML(t.title)}</strong><span>${escapeHTML(t.course||'General')} · ${Number(t.estimatedMinutes)||25} min · ${escapeHTML(dueLabel(t))}</span></div><span class="mini-badge ${t.priority==='High'?'red':t.priority==='Low'?'green':'blue'}">${escapeHTML(t.priority||'Medium')}</span><button class="suggested-focus" data-action="focus-task" data-id="${escapeHTML(t.id)}" title="Focus on this task">${svgIcon('play')}<span>Focus</span></button></div>`).join('')}</div><div class="panel-foot-link"><button class="text-link" data-screen="planner">Manage all tasks ${svgIcon('arrow')}</button></div>`:emptyState('You have a clear slate','Add a task or assignment to get a suggested starting point.','Create a task','add-task','calendar')}
+        </section>
+        <section class="panel"><div class="panel-header"><div><div class="eyebrow">COMING UP</div><h2>Upcoming deadlines</h2><p class="subheading">See what is approaching before it becomes urgent.</p></div><button class="text-link" data-screen="calendar">Open calendar ${svgIcon('arrow')}</button></div>
+          ${upcoming.length?`<div class="upcoming-list">${upcoming.map(t=>`<button class="upcoming-item" data-action="edit-task" data-id="${escapeHTML(t.id)}"><span class="upcoming-date"><b>${t.dueDate?dateFromKey(t.dueDate).getDate():'—'}</b><small>${t.dueDate?new Intl.DateTimeFormat('en-ZA',{month:'short'}).format(dateFromKey(t.dueDate)):'No date'}</small></span><span class="upcoming-info"><strong>${escapeHTML(t.title)}</strong><small>${escapeHTML(t.course||'General')} · ${escapeHTML(t.priority||'Medium')}</small></span><span class="upcoming-when">${escapeHTML(dueLabel(t))}</span></button>`).join('')}</div>`:emptyState('No upcoming dated tasks','Tasks with due dates will appear here.','Add a task','add-task','calendar')}
+        </section>
+        ${plans.length?`<section class="panel"><div class="panel-header"><div><div class="eyebrow">LARGE WORK, SMALL STEPS</div><h2>Assignment plans</h2><p class="subheading">Your larger goals, broken into manageable actions.</p></div><button class="text-link" data-screen="planner">View plans ${svgIcon('arrow')}</button></div><div class="home-plan-list">${plans.map(p=>{const done=p.steps.filter(x=>x.completed).length,total=p.steps.length,pct=total?Math.round(done/total*100):0;return `<div class="home-plan"><div class="home-plan-top"><div><strong>${escapeHTML(p.title)}</strong><span>${escapeHTML(p.course||'General')} · Due ${escapeHTML(fmtDate(p.dueDate,{day:'numeric',month:'short'}))}</span></div><b>${pct}%</b></div><div class="progress-track"><div class="progress-fill" style="width:${pct}%"></div></div></div>`}).join('')}</div></section>`:''}
       </div>
-      <div class="dashboard-grid">
-        <div class="stack">
-          <section class="panel"><div class="panel-header"><div><h2>Your next steps</h2><p class="subheading">A short list is easier to begin.</p></div><button class="text-link" data-screen="planner">Open planner ${svgIcon('arrow')}</button></div>
-          ${todayTasks.length?`<div class="progress-row"><span>Today's due tasks completed</span><strong>${progress}%</strong></div><div class="progress-track" style="margin-bottom:8px"><div class="progress-fill" style="width:${progress}%"></div></div><div class="task-list">${todayTasks.map(t=>taskRow(t,true)).join('')}</div>`:emptyState('Nothing pressing right now','Add a deadline or a small study task when you are ready.','Add your first task','add-task','calendar')}</section>
-          <section class="panel"><div class="panel-header"><div><h2>Coming up</h2><p class="subheading">Your next dated deadlines.</p></div><button class="text-link" data-screen="planner">See all</button></div>
-          ${upcoming.length?`<div class="task-list">${upcoming.map(t=>taskRow(t,true)).join('')}</div>`:emptyState('No upcoming deadlines','Tasks with due dates will appear here.','Plan a task','add-task','calendar')}</section>
-          ${state.plans.length?`<section class="panel"><div class="panel-header"><div><h2>Assignment plans</h2><p class="subheading">Your bigger pieces of work, broken into steps.</p></div><button class="text-link" data-screen="planner">Open plans ${svgIcon('arrow')}</button></div>${state.plans.slice().sort((a,b)=>a.dueDate.localeCompare(b.dueDate)).slice(0,3).map(plan=>{const done=plan.steps.filter(x=>x.completed).length;return `<div class="session-row"><div><strong>${escapeHTML(plan.title)}</strong><span>${escapeHTML(fmtDate(plan.dueDate,{day:'numeric',month:'short'}))} · ${done}/${plan.steps.length} steps</span></div><span class="mini-badge blue">${plan.steps.length?Math.round(done/plan.steps.length*100):0}%</span></div>`}).join('')}</section>`:''}
-        </div>
-        <div class="stack">
-          <section class="panel"><div class="panel-header"><div><h2>Focus rhythm</h2><p class="subheading">Minutes recorded over the last 7 days.</p></div><span class="mini-badge blue">7 days</span></div>
-            <div class="week-chart">${chart.map(day=>`<div class="chart-day"><div class="chart-bar-track" title="${day.minutes} focus minutes"><div class="chart-bar" style="height:${Math.max(3,Math.round(day.minutes/max*100))}%"></div></div><span>${day.label}</span></div>`).join('')}</div><div class="chart-legend"><i></i> Focus minutes</div></section>
-          <div class="gentle-card"><div class="gentle-symbol">${svgIcon('spark')}</div><div><strong>One thing at a time</strong><p>Choose the smallest useful next step. You do not have to finish everything in one sitting.</p></div></div>
-          <section class="panel"><div class="panel-header"><div><h2>Quick tools</h2><p class="subheading">Pick what would help right now.</p></div></div><div class="quick-grid">
-            <button class="quick-card" data-screen="focus"><span class="quick-icon">${svgIcon('clock')}</span><span><strong>Focus timer</strong><span>Work in short blocks</span></span></button>
-            <button class="quick-card" data-screen="study"><span class="quick-icon">${svgIcon('book')}</span><span><strong>Flashcards</strong><span>Practise active recall</span></span></button>
-            <button class="quick-card" data-screen="wellbeing"><span class="quick-icon">${svgIcon('heart')}</span><span><strong>Check in</strong><span>Pause and reflect</span></span></button>
-          </div></section>
-        </div>
-      </div>`;
+      <aside class="home-side-column">
+        <section class="panel home-focus-panel"><div class="panel-header"><div><div class="eyebrow">MAKE TIME TO FOCUS</div><h2>Your focus rhythm</h2><p class="subheading">A look at your study sessions this week.</p></div><span class="mini-badge blue">7 days</span></div><div class="home-focus-number">${focusWeek}<span>minutes</span></div><div class="week-chart">${focusChart.map(day=>`<div class="chart-day"><div class="chart-bar-track" title="${day.minutes} focus minutes"><div class="chart-bar" style="height:${Math.max(3,Math.round(day.minutes/max*100))}%"></div></div><span>${day.label}</span></div>`).join('')}</div><button class="secondary-btn" style="width:100%;margin-top:14px" data-screen="focus">${svgIcon('play')} Open focus studio</button></section>
+        <section class="panel"><div class="panel-header"><div><div class="eyebrow">QUICK ACCESS</div><h2>Go to a tool</h2><p class="subheading">Your main tools, kept separate.</p></div></div><div class="home-tool-list">
+          <button class="home-tool" data-screen="planner"><span class="home-tool-icon">${svgIcon('calendar')}</span><span><strong>Planner</strong><small>Tasks and assignment plans</small></span>${svgIcon('arrow')}</button>
+          <button class="home-tool" data-screen="study"><span class="home-tool-icon">${svgIcon('book')}</span><span><strong>Study decks</strong><small>Flashcards and active recall</small></span>${svgIcon('arrow')}</button>
+          <button class="home-tool" data-screen="wellbeing"><span class="home-tool-icon">${svgIcon('heart')}</span><span><strong>Wellbeing</strong><small>Optional personal check-in</small></span>${svgIcon('arrow')}</button>
+          <button class="home-tool" data-screen="insights"><span class="home-tool-icon">${svgIcon('target')}</span><span><strong>Insights</strong><small>Your recorded progress</small></span>${svgIcon('arrow')}</button>
+        </div></section>
+        <div class="home-reminder-card"><span>${svgIcon('spark')}</span><div><strong>Keep it manageable</strong><p>You do not have to complete everything today. A small, realistic next step is still progress.</p></div></div>
+      </aside>
+    </div>`;
   }
   function renderPlanner(){
     let tasks=sortedTasks(state.tasks);
@@ -398,6 +509,35 @@
       <section class="panel"><div class="toolbar"><div class="toolbar-left"><div class="filter-tabs"><button class="filter-tab ${plannerFilter==='open'?'active':''}" data-filter="open">To do</button><button class="filter-tab ${plannerFilter==='completed'?'active':''}" data-filter="completed">Completed</button><button class="filter-tab ${plannerFilter==='all'?'active':''}" data-filter="all">All tasks</button></div></div><div class="toolbar-right"><input class="field-control" id="plannerSearch" value="${escapeHTML(plannerSearch)}" placeholder="Search tasks..." style="width:155px" aria-label="Search tasks"><select class="field-control" id="courseFilter" aria-label="Filter by course">${courses.map(c=>`<option ${c===plannerCourse?'selected':''}>${escapeHTML(c)}</option>`).join('')}</select></div></div>
       <div class="planner-list">${tasks.length?tasks.map(t=>`<div class="planner-card ${t.completed?'completed':''}"><div class="planner-date"><b>${t.dueDate?dateFromKey(t.dueDate).getDate():'—'}</b><small>${t.dueDate?new Intl.DateTimeFormat('en-ZA',{month:'short'}).format(dateFromKey(t.dueDate)):'open'}</small></div><button class="task-check ${t.completed?'done':''}" data-action="toggle-task" data-id="${escapeHTML(t.id)}" aria-label="${t.completed?'Reopen':'Complete'} task">${t.completed?svgIcon('check'):''}</button><div class="task-main"><div class="task-title">${escapeHTML(t.title)}</div><div class="task-meta"><span>${escapeHTML(t.course||'General')}</span><span>·</span><span><i class="priority-dot ${priorityClass(t.priority)}"></i>${escapeHTML(t.priority)}</span><span>·</span><span>${escapeHTML(dueLabel(t))}</span></div></div><span class="mini-badge">${Number(t.estimatedMinutes)||25} min</span><div class="task-actions"><button data-action="edit-task" data-id="${escapeHTML(t.id)}" aria-label="Edit task">${svgIcon('edit')}</button><button data-action="delete-task" data-id="${escapeHTML(t.id)}" aria-label="Delete task">${svgIcon('trash')}</button></div></div>`).join(''):emptyState('No tasks match this view','Try another filter or add a new task to your planner.','Add a task','add-task','calendar')}</div></section>
       <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:12px;flex-wrap:wrap"><button class="soft-btn" data-action="export-ics">${svgIcon('download')} Export deadlines to calendar (.ics)</button><button class="soft-btn" data-action="add-course">${svgIcon('plus')} Manage courses</button></div>`;
+  }
+  function calendarWeekStart(){
+    const d=new Date();d.setHours(12,0,0,0);d.setDate(d.getDate()-((d.getDay()+6)%7)+(calendarOffset*7));return d;
+  }
+  function calendarItemsForDate(key){
+    const tasks=state.tasks.filter(t=>t.dueDate===key).map(t=>({kind:'task',id:t.id,title:t.title,course:t.course||'General',completed:t.completed,priority:t.priority||'Medium'}));
+    const plans=state.plans.filter(p=>p.dueDate===key).map(p=>({kind:'plan',id:p.id,title:p.title,course:p.course||'General',completed:p.steps.length>0&&p.steps.every(x=>x.completed),priority:'Plan'}));
+    return [...tasks,...plans];
+  }
+  function calendarEventHTML(item){
+    if(item.kind==='plan')return `<button class="calendar-event plan-event" data-screen="planner" title="Open assignment plans"><span class="calendar-event-dot"></span><span>${escapeHTML(item.title)}</span></button>`;
+    return `<button class="calendar-event task-event ${item.completed?'done':''}" data-action="edit-task" data-id="${escapeHTML(item.id)}" title="Open ${escapeHTML(item.title)}"><span class="calendar-event-dot ${item.priority==='High'?'high':item.priority==='Low'?'low':''}"></span><span>${escapeHTML(item.title)}</span></button>`;
+  }
+  function renderCalendar(){
+    const today=todayKey();
+    const title=calendarMode==='week'?(()=>{const start=calendarWeekStart(),end=addDays(start,6);return `${new Intl.DateTimeFormat('en-ZA',{day:'numeric',month:'short'}).format(start)} – ${new Intl.DateTimeFormat('en-ZA',{day:'numeric',month:'long',year:'numeric'}).format(end)}`;})():new Intl.DateTimeFormat('en-ZA',{month:'long',year:'numeric'}).format(new Date(new Date().getFullYear(),new Date().getMonth()+calendarOffset,1));
+    let calendarHTML='';
+    if(calendarMode==='week'){
+      const start=calendarWeekStart();
+      calendarHTML=`<div class="calendar-week-grid">${Array.from({length:7},(_,i)=>{const d=addDays(start,i),key=todayKey(d),items=calendarItemsForDate(key),isToday=key===today;return `<section class="calendar-day ${isToday?'is-today':''}"><header class="calendar-day-head"><span>${new Intl.DateTimeFormat('en-ZA',{weekday:'short'}).format(d)}</span><strong>${d.getDate()}</strong>${isToday?'<small>Today</small>':''}</header><div class="calendar-day-items">${items.length?items.map(calendarEventHTML).join(''):'<span class="calendar-no-items">No deadlines</span>'}</div><button class="calendar-add" data-action="add-task" data-date="${key}" aria-label="Add task on ${escapeHTML(fmtDate(key,{weekday:'long',day:'numeric',month:'long'}))}">+ Add</button></section>`;}).join('')}</div>`;
+    }else{
+      const first=new Date(new Date().getFullYear(),new Date().getMonth()+calendarOffset,1,12),start=addDays(first,-((first.getDay()+6)%7));
+      const cells=Array.from({length:42},(_,i)=>{const d=addDays(start,i),key=todayKey(d),items=calendarItemsForDate(key),outside=d.getMonth()!==first.getMonth();return `<section class="month-cell ${outside?'outside-month':''} ${key===today?'is-today':''}"><div class="month-cell-head"><strong>${d.getDate()}</strong><button class="calendar-add compact" data-action="add-task" data-date="${key}" aria-label="Add task on ${escapeHTML(fmtDate(key,{weekday:'long',day:'numeric',month:'long'}))}">+</button></div><div class="month-cell-events">${items.slice(0,3).map(calendarEventHTML).join('')}${items.length>3?`<span class="month-more">+${items.length-3} more</span>`:''}</div></section>`;}).join('');
+      calendarHTML=`<div class="month-weekdays">${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].map(d=>`<span>${d}</span>`).join('')}</div><div class="calendar-month-grid">${cells}</div>`;
+    }
+    const datedTasks=state.tasks.filter(t=>t.dueDate&&!t.completed),datedPlans=state.plans.filter(p=>p.dueDate&&p.steps.some(x=>!x.completed));
+    return `<div class="page-heading calendar-heading"><div><div class="eyebrow">SEE THE BIGGER PICTURE</div><h1>Calendar</h1><p class="subheading">Your task deadlines and assignment dates, together in one view.</p></div><button class="primary-btn" data-action="add-task">${svgIcon('plus')} New task</button></div>
+      <section class="panel calendar-panel"><div class="calendar-toolbar"><div class="calendar-period"><button class="icon-btn" data-calendar-shift="-1" aria-label="Previous ${calendarMode}">‹</button><div><h2>${escapeHTML(title)}</h2><span>${datedTasks.length} open task deadline${datedTasks.length===1?'':'s'} · ${datedPlans.length} active plan deadline${datedPlans.length===1?'':'s'}</span></div><button class="icon-btn" data-calendar-shift="1" aria-label="Next ${calendarMode}">›</button></div><div class="calendar-controls"><button class="soft-btn" data-calendar-today>Today</button><div class="filter-tabs"><button class="filter-tab ${calendarMode==='week'?'active':''}" data-calendar-mode="week">Week</button><button class="filter-tab ${calendarMode==='month'?'active':''}" data-calendar-mode="month">Month</button></div></div></div>${calendarHTML}<div class="calendar-legend"><span><i></i> Task</span><span><i class="plan-legend"></i> Assignment plan</span><span><i class="done-legend"></i> Completed task</span></div></section>
+      <div class="calendar-footer-grid"><section class="panel"><div class="panel-header"><div><h2>How to use your calendar</h2><p class="subheading">Keep it simple: deadlines appear when you add a due date to a task or assignment plan.</p></div></div><p class="calendar-help-copy">Select <strong>+ Add</strong> on any day to create a task with that date already filled in. Select a task to edit its details. Assignment plans are linked to the Planner.</p></section><section class="panel"><div class="panel-header"><div><h2>Need to organise a big deadline?</h2><p class="subheading">Turn one large assignment into smaller, dated steps.</p></div></div><button class="secondary-btn" data-action="create-study-plan">${svgIcon('spark')} Create an assignment plan</button></section></div>`;
   }
   function renderPlanCard(plan){
     const done=plan.steps.filter(step=>step.completed).length, total=plan.steps.length, progress=total?Math.round(done/total*100):0;
@@ -454,7 +594,7 @@
     const active=deck; const count=active?.cards.length||0; const card=active?.cards[flashIndex]||null;
     return `<div class="page-heading"><div><div class="eyebrow">REVISE WITH ACTIVE RECALL</div><h1>Study decks</h1><p class="subheading">Create your own flashcards, practise recall and keep track of the cards you know.</p></div><button class="primary-btn" data-action="add-deck">${svgIcon('plus')} New deck</button></div>
       <div class="study-layout"><section class="panel"><div class="panel-header"><div><h2>Your decks</h2><p class="subheading">${state.decks.length} deck${state.decks.length===1?'':'s'} saved</p></div></div>${state.decks.length?`<div class="deck-list">${state.decks.map(d=>`<button class="deck-item ${d.id===selectedDeckId?'active':''}" data-action="select-deck" data-id="${escapeHTML(d.id)}"><span class="deck-symbol">${svgIcon('book')}</span><span style="min-width:0"><strong>${escapeHTML(d.name)}</strong><span>${d.cards.length} card${d.cards.length===1?'':'s'} · ${d.cards.filter(c=>c.known).length} known</span></span></button>`).join('')}</div>`:emptyState('Start your first deck','Create a deck for a subject, topic or upcoming test.','Create a deck','add-deck','book')}
-      </section><section class="panel">${active?`<div class="panel-header"><div><h2>${escapeHTML(active.name)}</h2><p class="subheading">Card ${count?flashIndex+1:0} of ${count} · ${active.cards.filter(c=>c.known).length} marked known</p></div><div class="deck-toolbar"><button class="soft-btn" data-action="add-card" data-id="${escapeHTML(active.id)}">${svgIcon('plus')} Add card</button><button class="icon-btn" data-action="edit-deck" data-id="${escapeHTML(active.id)}" aria-label="Edit deck">${svgIcon('edit')}</button><button class="icon-btn" data-action="delete-deck" data-id="${escapeHTML(active.id)}" aria-label="Delete deck">${svgIcon('trash')}</button></div></div>
+      </section><section class="panel">${active?`<div class="panel-header"><div><h2>${escapeHTML(active.name)}</h2><p class="subheading">Card ${count?flashIndex+1:0} of ${count} · ${active.cards.filter(c=>c.known).length} marked known</p></div><div class="deck-toolbar"><button class="soft-btn" data-action="add-card" data-id="${escapeHTML(active.id)}">${svgIcon('plus')} Add card</button><button class="soft-btn" data-action="shuffle-deck" data-id="${escapeHTML(active.id)}">${svgIcon('refresh')} Shuffle</button><button class="icon-btn" data-action="edit-deck" data-id="${escapeHTML(active.id)}" aria-label="Edit deck">${svgIcon('edit')}</button><button class="icon-btn" data-action="delete-deck" data-id="${escapeHTML(active.id)}" aria-label="Delete deck">${svgIcon('trash')}</button></div></div>
           ${card?`<div class="deck-card-stage"><button class="flashcard" data-action="flip-card" aria-label="Flip flashcard"><span class="flash-label">${flashFlipped?'ANSWER':'QUESTION'}</span><h3>${escapeHTML(flashFlipped?card.back:card.front)}</h3><span class="flash-hint">${flashFlipped?'Tap to see the question':'Tap card to reveal the answer'}</span></button></div><div class="flash-controls"><button class="soft-btn" data-action="previous-card">Previous</button><button class="secondary-btn" data-action="flip-card">${svgIcon('refresh')} Flip card</button><button class="soft-btn" data-action="next-card">Next</button></div><div style="display:flex;justify-content:center;gap:8px;margin-top:12px"><button class="soft-btn" data-action="mark-unknown">Still learning</button><button class="primary-btn" data-action="mark-known">${svgIcon('check')} I know this</button></div><div style="margin-top:20px"><div class="panel-header"><div><h3 style="margin:0">Cards in this deck</h3><p class="subheading">Edit or remove individual cards.</p></div></div><div class="task-list">${active.cards.map((c,i)=>`<div class="task-row"><span class="mini-badge ${c.known?'green':'blue'}">${i+1}</span><div class="task-main"><div class="task-title">${escapeHTML(c.front)}</div><div class="task-meta">${c.known?'Marked as known':'Still learning'}</div></div><div class="task-actions"><button data-action="edit-card" data-deck-id="${escapeHTML(active.id)}" data-id="${escapeHTML(c.id)}" aria-label="Edit flashcard">${svgIcon('edit')}</button><button data-action="delete-card" data-deck-id="${escapeHTML(active.id)}" data-id="${escapeHTML(c.id)}" aria-label="Delete flashcard">${svgIcon('trash')}</button></div></div>`).join('')}</div></div>`:emptyState('Add your first flashcard','Write a question on the front and the answer on the back.','Add flashcard','add-card','bookOpen')}
         `:`${emptyState('Choose a study deck','Select a deck on the left, or create your first one to begin.','Create a deck','add-deck','bookOpen')}`}</section></div>`;
   }
@@ -501,17 +641,17 @@
   }
   function renderScreen(){
     const app=$('#appMain');
-    const views={dashboard:renderDashboard,planner:renderPlanner,focus:renderFocus,study:renderStudy,wellbeing:renderWellbeing,insights:renderInsights,settings:renderSettings};
+    const views={dashboard:renderDashboard,planner:renderPlanner,calendar:renderCalendar,focus:renderFocus,study:renderStudy,wellbeing:renderWellbeing,insights:renderInsights,settings:renderSettings};
     app.innerHTML=(views[currentScreen]||renderDashboard)();
     updateProfileChrome();
     if(currentScreen==='focus') syncTimerDisplay();
   }
 
-  function openTaskModal(taskId=null){
+  function openTaskModal(taskId=null,presetDate=''){
     const task=taskId?state.tasks.find(t=>t.id===taskId):null;
     const body=`<form id="taskForm" class="settings-form" data-edit-id="${task?escapeHTML(task.id):''}">
       <div class="form-field"><label for="taskTitle">Task / assignment name *</label><input id="taskTitle" name="title" maxlength="120" required value="${escapeHTML(task?.title||'')}" placeholder="e.g. Prepare accounting revision notes" autofocus></div>
-      <div class="form-grid-2"><div class="form-field"><label for="taskCourse">Course / subject</label><select id="taskCourse" name="course">${state.courses.map(c=>`<option ${c===(task?.course||'General')?'selected':''}>${escapeHTML(c)}</option>`).join('')}</select></div><div class="form-field"><label for="taskDate">Due date</label><input id="taskDate" name="dueDate" type="date" value="${escapeHTML(task?.dueDate||'')}"></div></div>
+      <div class="form-grid-2"><div class="form-field"><label for="taskCourse">Course / subject</label><select id="taskCourse" name="course">${state.courses.map(c=>`<option ${c===(task?.course||'General')?'selected':''}>${escapeHTML(c)}</option>`).join('')}</select></div><div class="form-field"><label for="taskDate">Due date</label><input id="taskDate" name="dueDate" type="date" value="${escapeHTML(task?.dueDate||presetDate||'')}"></div></div>
       <div class="form-grid-2"><div class="form-field"><label for="taskPriority">Priority</label><select id="taskPriority" name="priority"><option ${task?.priority==='High'?'selected':''}>High</option><option ${(!task||task.priority==='Medium')?'selected':''}>Medium</option><option ${task?.priority==='Low'?'selected':''}>Low</option></select></div><div class="form-field"><label for="taskEstimate">Estimated study time</label><select id="taskEstimate" name="estimatedMinutes">${[15,25,30,45,60,90,120].map(n=>`<option value="${n}" ${(Number(task?.estimatedMinutes)||25)===n?'selected':''}>${n} minutes</option>`).join('')}</select></div></div>
       <div class="dialog-footer"><button type="button" class="soft-btn" data-action="close-dialog">Cancel</button><button type="submit" class="primary-btn">${svgIcon('check')} ${task?'Save changes':'Add to planner'}</button></div></form>`;
     openDialog(task?'Edit task':'Add a task',body);
@@ -574,7 +714,10 @@
 
   document.addEventListener('click',event=>{
     if(!event.target.closest('#profileMenu')&&!event.target.closest('#profileTrigger')){$('#profileMenu')?.classList.add('hidden');$('#profileTrigger')?.setAttribute('aria-expanded','false');}
-    const screenBtn=event.target.closest('[data-screen]');if(screenBtn){$('#profileMenu')?.classList.add('hidden');$('#profileTrigger')?.setAttribute('aria-expanded','false');showScreen(screenBtn.dataset.screen);return;}
+    const screenBtn=event.target.closest('[data-screen]');if(screenBtn){$('#profileMenu')?.classList.add('hidden');$('#profileTrigger')?.setAttribute('aria-expanded','false');if($('#appDialog').open)closeDialog();showScreen(screenBtn.dataset.screen);return;}
+    if(event.target.closest('[data-calendar-shift]')){calendarOffset+=Number(event.target.closest('[data-calendar-shift]').dataset.calendarShift)||0;renderScreen();return;}
+    if(event.target.closest('[data-calendar-mode]')){calendarMode=event.target.closest('[data-calendar-mode]').dataset.calendarMode;renderScreen();return;}
+    if(event.target.closest('[data-calendar-today]')){calendarOffset=0;renderScreen();return;}
     const filterBtn=event.target.closest('[data-filter]');if(filterBtn){plannerFilter=filterBtn.dataset.filter;renderScreen();return;}
     const modeBtn=event.target.closest('[data-timer-mode]');if(modeBtn){setTimerMode(modeBtn.dataset.timerMode);return;}
     const stressBtn=event.target.closest('[data-stress]');if(stressBtn){chosenStress=Number(stressBtn.dataset.stress);renderScreen();return;}
@@ -582,10 +725,10 @@
     const energyBtn=event.target.closest('[data-energy]');if(energyBtn){chosenEnergy=Number(energyBtn.dataset.energy);renderScreen();return;}
     const btn=event.target.closest('[data-action]');if(!btn)return;const action=btn.dataset.action,id=btn.dataset.id;
     switch(action){
-      case 'add-task':openTaskModal();break;case 'create-study-plan':openStudyPlanModal();break;case 'toggle-plan-step':{const plan=state.plans.find(p=>p.id===btn.dataset.planId),step=plan?.steps.find(x=>x.id===id);if(step){step.completed=!step.completed;saveState();renderScreen();}}break;case 'delete-plan':{if(confirm('Delete this assignment plan and its steps?')){state.plans=state.plans.filter(p=>p.id!==id);saveState();renderScreen();showToast('Assignment plan deleted.');}}break;case 'edit-task':openTaskModal(id);break;case 'toggle-task':toggleTask(id);break;case 'delete-task':deleteTask(id);break;
-      case 'close-dialog':closeDialog();break;case 'quick-avatar':openAvatarPicker();break;case 'choose-avatar':state.profile.avatarEmoji=btn.dataset.avatar;state.profile.avatarImage='';saveState();renderScreen();showScreen('settings');break;case 'remove-avatar':state.profile.avatarEmoji='🌱';state.profile.avatarImage='';saveState();renderScreen();showToast('Profile avatar reset.');break;case 'toggle-profile-menu':{const menu=$('#profileMenu'),trigger=$('#profileTrigger');menu.classList.toggle('hidden');trigger.setAttribute('aria-expanded',String(!menu.classList.contains('hidden')));}break;case 'settings-jump':{const target=btn.dataset.target;$('#profileMenu').classList.add('hidden');$('#profileTrigger').setAttribute('aria-expanded','false');showScreen('settings');setTimeout(()=>$('#'+target)?.scrollIntoView({behavior:'smooth',block:'start'}),50);}break;case 'toggle-reminders':toggleReminders();break;case 'install-app':installApp();break;case 'download-testing-guide':downloadTestingGuide();break;case 'export-backup':exportBackup();break;case 'import-backup':importBackup();break;case 'export-ics':exportICS();break;
+      case 'add-task':openTaskModal(null,btn.dataset.date||'');break;case 'create-study-plan':openStudyPlanModal();break;case 'focus-task':timerTaskId=id;setTimerMode('focus');showScreen('focus');break;case 'open-more':openDialog('More tools',`<div class="more-tools-list"><button class="home-tool" data-screen="wellbeing"><span class="home-tool-icon">${svgIcon('heart')}</span><span><strong>Wellbeing check-in</strong><small>Optional personal reflection</small></span>${svgIcon('arrow')}</button><button class="home-tool" data-screen="insights"><span class="home-tool-icon">${svgIcon('target')}</span><span><strong>Study insights</strong><small>Review your recorded activity</small></span>${svgIcon('arrow')}</button><button class="home-tool" data-screen="settings"><span class="home-tool-icon">${svgIcon('spark')}</span><span><strong>Settings</strong><small>Profile, reminders and data</small></span>${svgIcon('arrow')}</button></div>`);break;case 'toggle-plan-step':{const plan=state.plans.find(p=>p.id===btn.dataset.planId),step=plan?.steps.find(x=>x.id===id);if(step){step.completed=!step.completed;saveState();renderScreen();}}break;case 'delete-plan':{if(confirm('Delete this assignment plan and its steps?')){state.plans=state.plans.filter(p=>p.id!==id);saveState();renderScreen();showToast('Assignment plan deleted.');}}break;case 'edit-task':openTaskModal(id);break;case 'toggle-task':toggleTask(id);break;case 'delete-task':deleteTask(id);break;
+      case 'close-dialog':closeDialog();break;case 'quick-avatar':openAvatarPicker();break;case 'choose-avatar':state.profile.avatarEmoji=btn.dataset.avatar;state.profile.avatarImage='';saveState();closeDialog();renderScreen();showToast('Avatar updated.');break;case 'remove-avatar':state.profile.avatarEmoji='🌱';state.profile.avatarImage='';saveState();renderScreen();showToast('Profile avatar reset.');break;case 'toggle-profile-menu':{const menu=$('#profileMenu'),trigger=$('#profileTrigger');menu.classList.toggle('hidden');trigger.setAttribute('aria-expanded',String(!menu.classList.contains('hidden')));}break;case 'settings-jump':{const target=btn.dataset.target;$('#profileMenu').classList.add('hidden');$('#profileTrigger').setAttribute('aria-expanded','false');showScreen('settings');setTimeout(()=>$('#'+target)?.scrollIntoView({behavior:'smooth',block:'start'}),50);}break;case 'toggle-reminders':toggleReminders();break;case 'install-app':installApp();break;case 'download-testing-guide':downloadTestingGuide();break;case 'export-backup':exportBackup();break;case 'import-backup':importBackup();break;case 'export-ics':exportICS();break;
       case 'add-course':openCourseModal();break;case 'remove-course':{const course=btn.dataset.course;if(confirm(`Remove "${course}" from the course list? Existing tasks will keep this course name.`)){state.courses=state.courses.filter(c=>c!==course);saveState();renderScreen();showToast('Course removed from the list.');}}break;
-      case 'timer-toggle':timerToggle();break;case 'timer-reset':timerReset();break;case 'add-deck':openDeckModal();break;case 'select-deck':selectedDeckId=id;flashIndex=0;flashFlipped=false;renderScreen();break;case 'edit-deck':openDeckModal(id);break;
+      case 'timer-toggle':timerToggle();break;case 'timer-reset':timerReset();break;case 'shuffle-deck':{const deck=state.decks.find(d=>d.id===id);if(deck&&deck.cards.length>1){for(let i=deck.cards.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[deck.cards[i],deck.cards[j]]=[deck.cards[j],deck.cards[i]];}flashIndex=0;flashFlipped=false;saveState();renderScreen();showToast('Cards shuffled for a fresh review.');}else showToast('Add at least two cards to shuffle.');}break;case 'add-deck':openDeckModal();break;case 'select-deck':selectedDeckId=id;flashIndex=0;flashFlipped=false;renderScreen();break;case 'edit-deck':openDeckModal(id);break;
       case 'delete-deck':{const deck=state.decks.find(d=>d.id===id);if(deck&&confirm(`Delete the "${deck.name}" deck and all its cards?`)){state.decks=state.decks.filter(d=>d.id!==id);if(selectedDeckId===id)selectedDeckId=null;saveState();renderScreen();showToast('Deck deleted.');}}break;
       case 'add-card':openCardModal(id);break;case 'edit-card':{const deck=state.decks.find(d=>d.id===btn.dataset.deckId);if(deck)openCardModal(deck.id,id);}break;
       case 'flip-card':flashFlipped=!flashFlipped;renderScreen();break;case 'previous-card':{const deck=state.decks.find(d=>d.id===selectedDeckId);if(deck?.cards.length){flashIndex=(flashIndex-1+deck.cards.length)%deck.cards.length;flashFlipped=false;renderScreen();}}break;
